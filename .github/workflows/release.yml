@@ -26,10 +26,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Flutter SDK
-        uses: flutter-actions/setup-flutter@v4
+        uses: subosito/flutter-action@v2
         with:
           channel: stable
-          version: 3.35.7
+          flutter-version: 3.35.7
       - name: Build web application
         run: flutter build web --release
       - name: Save build artifacts
