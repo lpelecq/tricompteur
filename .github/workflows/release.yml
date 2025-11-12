@@ -33,7 +33,7 @@ jobs:
       - name: Build web application
         run: flutter build web --release
       - name: Save build artifacts
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: build/web/
   deploy:
