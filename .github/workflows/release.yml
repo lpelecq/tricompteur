@@ -31,7 +31,7 @@ jobs:
           channel: stable
           flutter-version: 3.35.7
       - name: Build web application
-        run: flutter build web --release
+        run: flutter build web --release --base-href /tricompteur/
       - name: Save build artifacts
         uses: actions/upload-pages-artifact@v4
         with:
