@@ -29,7 +29,7 @@ jobs:
         uses: flutter-actions/setup-flutter@v4
         with:
           channel: stable
-          version: 3.9.2
+          version: 3.35.7
       - name: Build web application
         run: flutter build web --release
       - name: Save build artifacts
