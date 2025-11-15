@@ -19,6 +19,12 @@ class CountersController extends Notifier<void> {
     );
   }
 
+  Future<void> decrementCounter(int id, int oldValue) async {
+    if (oldValue > 0) {
+      await _dao.updateCounterValue(id, oldValue - 1);
+    }
+  }
+
   Future<void> incrementCounter(int id, int oldValue) async {
     await _dao.updateCounterValue(id, oldValue + 1);
   }

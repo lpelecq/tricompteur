@@ -23,6 +23,16 @@ class CountersScreen extends ConsumerWidget {
                   children: [
                     Text('${counter.value}', style: TextStyle(fontSize: 16)),
                     IconButton(
+                      icon: Icon(Icons.remove),
+                      onPressed: counter.value > 0
+                          ? () {
+                              ref
+                                  .read(countersControllerProvider.notifier)
+                                  .decrementCounter(counter.id, counter.value);
+                            }
+                          : null,
+                    ),
+                    IconButton(
                       icon: Icon(Icons.add),
                       onPressed: () {
                         ref
